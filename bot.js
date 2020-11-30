@@ -6,7 +6,6 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
 	console.log(`${bot.user.username} is online!`)
-	bot.user.setGame("test");
 });
 
 bot.on("message", async message => {
@@ -17,10 +16,6 @@ bot.on("message", async message => {
 	let messageArray = message.content.split(" ");
 	let cmd = messageArray[0];
 	let args = messageArray.slice(1);
-
-	if(message.content == "/очисти <@356112816970924033>"){
-		message.reply("ты пидор")
-	}
 
 	if(cmd === `${prefix}kick`){
 
